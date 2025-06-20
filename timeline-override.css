@@ -1,0 +1,77 @@
+/*
+ * Timeline Card Color Override
+ * Provides a new, space-themed color scheme for the timeline cards.
+ */
+
+.timeline-card {
+    background: rgba(10, 25, 47, 0.75); /* Dark blue space background */
+    border: 1px solid rgba(100, 255, 218, 0.2); /* Faint cyan border */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    box-shadow: 0 0 25px rgba(100, 255, 218, 0.1); /* Subtle glow */
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    border-color: rgba(100, 255, 218, 0.5);
+    box-shadow: 0 0 35px rgba(100, 255, 218, 0.2);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.timeline-icon {
+    background: linear-gradient(45deg, #c770f0, #64ffda); /* Nebula gradient */
+    color: #fff;
+    box-shadow: 0 0 15px #c770f0, 0 0 25px #64ffda;
+}
+
+.timeline-card:hover .timeline-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #c770f0, 0 0 35px #64ffda;
+}
+
+.timeline-title {
+    color: #64ffda; /* Bright cyan for titles */
+}
+
+.timeline-description {
+    color: #ccd6f6; /* Off-white for readability */
+}
+
+.timeline-date {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+.timeline-line {
+    background: linear-gradient(to bottom, #64ffda, #c770f0);
+    box-shadow: 0 0 10px #64ffda, 0 0 20px #c770f0;
+}
+
+.timeline-item::before {
+    background-color: #64ffda;
+    border: 3px solid #0a192f;
+    box-shadow: 0 0 10px #64ffda;
+}
+
+.timeline-item.left .timeline-card::after {
+    border-left-color: rgba(10, 25, 47, 0.75) !important;
+}
+
+.timeline-item.right .timeline-card::after {
+    border-right-color: rgba(10, 25, 47, 0.75) !important;
+}
+
+.flying-plane i {
+    color: #64ffda;
+    text-shadow: 0 0 15px #64ffda;
+}
+
+/* 
+ * Hide the old, scroll-following rocket which was a pseudo-element.
+ * This ensures only the mouse-following rocket is visible.
+ */
+.timeline-line::before,
+.timeline-line::after {
+    display: none !important;
+} 

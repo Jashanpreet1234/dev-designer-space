@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jashanpreet Kaur - Rocket</title>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <link rel="stylesheet" type="text/css" href="timeline-override.css">
+    <link rel="stylesheet" type="text/css" href="rocket-design.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="icon" type="x-icon" href="images/favicon.ico">
+    
+    <!-- Audio for page entrance sound -->
+    <audio id="entrance-sound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Woman's voice for summary -->
+    <audio id="summary-voice" preload="auto">
+        <source src="https://www.soundjay.com/voice/sounds/female-voice-1.wav" type="audio/wav">
+        <source src="https://www.soundjay.com/voice/sounds/female-voice-1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Hover sound for cards -->
+    <audio id="hover-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-09.wav" type="audio/wav">
+        <source src="https://www.soundjay.com/button/sounds/button-09.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Click sound for buttons -->
+    <audio id="click-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-10.wav" type="audio/wav">
+        <source src="https://www.soundjay.com/button/sounds/button-10.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Success sound for achievements -->
+    <audio id="success-sound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/success-1.wav" type="audio/wav">
+        <source src="https://www.soundjay.com/misc/sounds/success-1.mp3" type="audio/mpeg">
+    </audio>
+</head>
+<body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="#home" class="navbar-brand">Jashan</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Education</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    <header id="body-header">
+        <div id="particles-js-header"></div>
+        <div class="header-content">
+            <h1 class="glitch-text" data-text="Jashan">Jashan</h1>
+            <p>Web Developer & Web Designer</p>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+
+        <section id="about">
+            <div id="about-para">
+                <p>   
+                    I am a passionate and skilled IT professional with hands-on experience across multiple sectors, from IT support and code optimization to user research and network management. I have worked on a variety of technical projects, including SSO integration, accessibility improvements, and website optimization, excelling in fast-paced, collaborative environments. With a diploma in Computer Programming from Algonquin College, I am well-versed in a range of programming languages and tools, making me a valuable asset to any team focused on enhancing technology performance and user experiences.
+                 
+            </div>
+
+        </section>
+
+        <!-- ROCKET ELEMENT -->
+        <!-- <div id="rocket">
+            <div class="rocket-body">
+                <div class="window"></div>
+            </div>
+            <div class="fin fin-left"></div>
+            <div class="fin fin-right"></div>
+            <div class="flame"></div>
+        </div> -->
+
+        <!-- ----------------------------Courses and Software Section----------------------------------------------------- -->
+        <section id="courses">
+            <h3 class="section-heading">
+                <span><i class="fas fa-graduation-cap"></i></span>
+                <a href="#education-section" class="section-link">
+                    <span>Courses and Software</span> <i class="fas fa-link"></i>
+                </a>
+            </h3>
+
+            <div id="courses-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Java with Object Oriented Programming</h4>
+                            <p class="timeline-description">Eclipse, Netbeans, and IntelliJ. Comprehensive understanding of OOP concepts, inheritance, polymorphism, and design patterns.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Database Management</h4>
+                            <p class="timeline-description">MySQL, SQL Server, Oracle Database, PostgreSQL managed by DBMS. Advanced querying, optimization, and database design.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Network Programming</h4>
+                            <p class="timeline-description">Wireshark and Packet Tracer. Network analysis, protocol understanding, and network security fundamentals.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Network Security & Nmap</h4>
+                            <p class="timeline-description">Completed "Scan Systems with Nmap" on Codecademy. Network scanning, vulnerability assessment, and ethical hacking practices.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Front-End Web Development</h4>
+                            <p class="timeline-description">React.js, Angular, and Bootstrap. Building responsive, interactive web applications with modern frameworks.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Back-End Development</h4>
+                            <p class="timeline-description">Node.js and Express.js. Building scalable server-side applications and integrating database solutions.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Cloud & DevOps Tools</h4>
+                            <p class="timeline-description">AWS, Azure, Jenkins, and Docker. Creating cloud-native applications and managing infrastructure.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">DevOps Tools</h4>
+                            <p class="timeline-description">Jenkins, Docker, Kubernetes, GitLab CI/CD. Implementing CI/CD pipelines and containerized applications.</p>
+                            <div class="timeline-date">2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Space Projects Section -->
+        <section id="projects" class="cosmic-section">
+            <div class="stars-overlay"></div>
+            
+            <h3 class="section-heading space-heading">
+                <span class="rocket-icon"><i class="fas fa-rocket"></i></span>
+                <span>Space Projects</span>
+                <div class="radar-ping"></div>
+            </h3>
+
+            <div class="mission-control">
+                <div class="radar-screen">
+                    <div class="radar-sweep"></div>
+                    <span class="radar-text">SCANNING FOR PROJECTS...</span>
+                </div>
+            </div>
+
+            <div id="projects-container" class="space-grid">
+                <!-- Book Quest Mission -->
+                <div class="project-card space-capsule">
+                    <div class="project-image capsule-window">
+                        <img src="images/Books.png" alt="Book Quest">
+                        <div class="window-reflection"></div>
+                    </div>
+                    <div class="project-content mission-details">
+                        <div class="mission-status">MISSION: ACTIVE</div>
+                        <h4 class="project-title">Book Quest</h4>
+                        <p class="project-description">
+                            Navigate through a vast library of literary worlds. Each book is a new planet to explore.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag power-cell">REACT</span>
+                            <span class="tech-tag power-cell">NODE.JS</span>
+                            <span class="tech-tag power-cell">MONGODB</span>
+                        </div>
+                        <div class="project-links control-panel">
+                            <a href="https://github.com/Jashanpreet1234/Books.io" class="project-link launch-btn">Launch Code</a>
+                            <a href="https://jashanpreet1234.github.io/Books.io/" class="project-link deploy-btn">Deploy Mission</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beauty RPG Mission -->
+                <div class="project-card space-capsule">
+                    <div class="project-image capsule-window">
+                        <img src="images/makeup.png" alt="Beauty RPG">
+                        <div class="window-reflection"></div>
+                    </div>
+                    <div class="project-content mission-details">
+                        <div class="mission-status">MISSION: ACTIVE</div>
+                        <h4 class="project-title">Beauty RPG</h4>
+                        <p class="project-description">
+                            Command your beauty arsenal in this stellar shopping experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag power-cell">REACT</span>
+                            <span class="tech-tag power-cell">CSS</span>
+                            <span class="tech-tag power-cell">API</span>
+                        </div>
+                        <div class="project-links control-panel">
+                            <a href="https://github.com/Jashanpreet1234/MakeUp.io" class="project-link launch-btn">Launch Code</a>
+                            <a href="https://jashanpreet1234.github.io/MakeUp.io/" class="project-link deploy-btn">Deploy Mission</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!---------------------------------------------portfolio ------------------------------------------------ -->
+        <section id="portfolio">
+            <h3 class="section-heading">
+                <i class="fas fa-briefcase"></i>
+                 Portfolio
+            </h3>
+            
+            <div id="portfolio-set">
+                <div class="container">
+                    <div class="row">
+                
+                        <h3 class="animate-charcter"> Here are some of my projects</h3><br>
+                      
+
+            </div>
+        </div>
+      </div>
+         
+     
+    
+        <div class="glow-on-hover">
+            <div class="button">
+                <div class="text-1">
+                <a href="project.html">Click Me</a></div>
+                <div id="portfolio-items">
+                </div>	
+                    <div>
+
+                
+                      
+                        <p class="image"></p>
+                    </div>   
+        
+            
+                
+             
+            </div>
+        </section>
+
+        
+<!-- ----------------------------------------------------contact----------------------------------------------------- -->
+        <section id="contact">
+            <h2 class="mission-center-title">🛸 Mission Control Center</h2>
+            
+            <div class="mission-control-layout">
+                <!-- Left Side - Transmission Console -->
+                <div class="transmission-console">
+                    <div class="console-header">
+                        • TRANSMISSION CONSOLE •
+                    </div>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label>COMMANDER NAME:</label>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>COMMUNICATION FREQUENCY:</label>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                        <div class="form-group">
+                            <label>TRANSMISSION CONTENT:</label>
+                            <textarea name="message" placeholder="Type your message" required></textarea>
+                    </div>
+                        
+                        <button type="submit" class="send-transmission-btn">
+                            • SEND TRANSMISSION •
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Side - Establish Contact -->
+                <div class="establish-contact">
+                    <div class="contact-header">
+                        ESTABLISH CONTACT
+                    </div>
+                    <p class="contact-intro">
+                        Ready to launch your next project? Connect through these communication channels:
+                    </p>
+                    
+                    <div class="contact-options">
+                        <a href="mailto:jashanpreetkaur2904@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            SEND EMAIL TRANSMISSION
+                        </a>
+                        
+                        <a href="https://github.com/Jashanpreet1234?tab=repositories" class="contact-link" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            ACCESS CODE REPOSITORY
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/feed/" class="contact-link" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                            CONNECT ON LINKEDIN
+                        </a>
+                        
+                        <a href="tel:+1234567890" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            DIRECT COMMUNICATION LINE
+                        </a>
+                    </div>
+                </div>
+                </div> 
+
+            <div class="mission-control-footer">
+                <p>• MISSION CONTROL CENTER - ONLINE •</p>
+                <p>2024 - Commander Jashan - All Systems Operational</p>
+        </div>
+        </section>
+
+        <div id="rocket">
+          <div class="rocket-body">
+            <div class="button button1"></div>
+            <div class="button button2"></div>
+            <div class="button button3"></div>
+            <div class="window"></div>
+            <div class="button button4"></div>
+            <div class="fin fin-left"></div>
+            <div class="fin fin-right"></div>
+            <div class="flame"></div>
+          </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+            const navbar = document.querySelector('.navbar');
+            
+                // Toggle mobile menu
+                menuIcon.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                menuIcon.classList.toggle('active');
+            });
+
+                // Add scrolled class to navbar
+                window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // ROCKET MOUSE-FOLLOW SCRIPT
+            const rocket = document.getElementById('rocket');
+            if (rocket) {
+                let mouseX = window.innerWidth / 2;
+                let mouseY = window.innerHeight / 2;
+                
+                // Use objects to store rocket's position and velocity for smoother animation
+                let position = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+                let velocity = { x: 0, y: 0 };
+                let angle = 0;
+                
+                const easing = 0.08; // How quickly the rocket follows the mouse (lower is smoother)
+                
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
+
+                function animateRocket() {
+                    // Calculate distance to target
+                    let dx = mouseX - position.x;
+                    let dy = mouseY - position.y;
+                    
+                    // Accelerate towards the target
+                    velocity.x = dx * easing;
+                    velocity.y = dy * easing;
+                    
+                    // Update position
+                    position.x += velocity.x;
+                    position.y += velocity.y;
+                    
+                    // Calculate angle for rotation
+                    let targetAngle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+                    
+                    // Smoothly rotate towards the target angle
+                    angle += (targetAngle - angle) * 0.1;
+                    
+                    // Apply transformations
+                    rocket.style.left = position.x + 'px';
+                    rocket.style.top = position.y + 'px';
+                    rocket.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+                    
+                    // Continue the animation loop
+                    requestAnimationFrame(animateRocket);
+                }
+                
+                // Start the animation
+                animateRocket();
+            }
+            });
+        </script>
+
+        <!-- JavaScript for enhanced sound system -->
+        <script>
+            // Sound management system
+            const SoundManager = {
+                sounds: {},
+                isMuted: false,
+                
+                init() {
+                    this.sounds = {
+                        entrance: document.getElementById('entrance-sound'),
+                        summary: document.getElementById('summary-voice'),
+                        hover: document.getElementById('hover-sound'),
+                        click: document.getElementById('click-sound'),
+                        success: document.getElementById('success-sound')
+                    };
+                    
+                    // Set volumes
+                    Object.values(this.sounds).forEach(sound => {
+                        if (sound) sound.volume = 0.3;
+                    });
+                    
+                    this.setupEventListeners();
+                },
+                
+                play(soundName) {
+                    if (this.isMuted || !this.sounds[soundName]) return;
+                    
+                    const sound = this.sounds[soundName];
+                    sound.currentTime = 0; // Reset to start
+                    sound.play().catch(error => {
+                        console.log(`Failed to play ${soundName}:`, error);
+                    });
+                },
+                
+                setupEventListeners() {
+                    // Entrance sound on page load
+                    document.addEventListener('DOMContentLoaded', () => {
+                        setTimeout(() => this.play('entrance'), 500);
+                    });
+                    
+                    // Woman's voice for summary when about section is visible
+                    const aboutSection = document.getElementById('about');
+                    if (aboutSection) {
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    setTimeout(() => this.play('summary'), 1000);
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        }, { threshold: 0.5 });
+                        observer.observe(aboutSection);
+                    }
+                    
+                    // Hover sounds for interactive elements
+                    const interactiveElements = document.querySelectorAll('.tech-card, .course-card, .nav-link, .card-link');
+                    interactiveElements.forEach(element => {
+                        element.addEventListener('mouseenter', () => this.play('hover'));
+                        element.addEventListener('click', () => this.play('click'));
+                    });
+                    
+                    // Success sound for achievements (when scrolling to projects)
+                    const projectsSection = document.getElementById('tech-cards-section');
+                    if (projectsSection) {
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    setTimeout(() => this.play('success'), 500);
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        }, { threshold: 0.3 });
+                        observer.observe(projectsSection);
+                    }
+                    
+                    // Toggle mute with 'M' key
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key.toLowerCase() === 'm') {
+                            this.isMuted = !this.isMuted;
+                            console.log(`Sound ${this.isMuted ? 'muted' : 'unmuted'}`);
+                        }
+                    });
+                }
+            };
+            
+            // Initialize sound system
+            SoundManager.init();
+            
+            // Add visual feedback for sound controls
+            const soundIndicator = document.createElement('div');
+            soundIndicator.innerHTML = `
+                <div class="sound-control-btn" style="
+                    position: fixed; 
+                    top: 20px; 
+                    right: 20px; 
+                    z-index: 1000; 
+                    width: 60px; 
+                    height: 60px; 
+                    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), rgba(255, 20, 147, 0.1));
+                    border-radius: 50%; 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center; 
+                    cursor: pointer; 
+                    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(255, 20, 147, 0.1);
+                    transition: all 0.4s ease;
+                    border: 2px solid rgba(0, 255, 255, 0.3);
+                    font-size: 24px;
+                    color: #00ffff;
+                    backdrop-filter: blur(15px);
+                    -webkit-backdrop-filter: blur(15px);
+                    position: relative;
+                    overflow: hidden;
+                " onmouseover="this.style.transform='scale(1.15) rotate(5deg)'; this.style.boxShadow='0 0 30px rgba(0, 255, 255, 0.5), inset 0 0 30px rgba(255, 20, 147, 0.2)'" 
+                   onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(255, 20, 147, 0.1)'"
+                   onclick="toggleSound()">
+                    <div style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: conic-gradient(from 0deg, transparent, rgba(0, 255, 255, 0.1), transparent, rgba(255, 20, 147, 0.1), transparent);
+                        animation: rotate 3s linear infinite;
+                        border-radius: 50%;
+                    "></div>
+                    <div style="
+                        position: relative;
+                        z-index: 2;
+                        text-shadow: 0 0 10px #00ffff;
+                    ">🔊</div>
+                </div>
+            `;
+            document.body.appendChild(soundIndicator);
+            
+            // Sound toggle function
+            function toggleSound() {
+                SoundManager.isMuted = !SoundManager.isMuted;
+                const indicator = soundIndicator.querySelector('.sound-control-btn');
+                const iconDiv = indicator.querySelector('div:last-child');
+                iconDiv.innerHTML = SoundManager.isMuted ? '🔇' : '🔊';
+                
+                // Add cosmic pulse animation
+                indicator.style.animation = 'cosmicPulse 0.8s ease';
+                setTimeout(() => {
+                    indicator.style.animation = '';
+                }, 800);
+                
+                // Show space-themed notification
+                showSoundNotification(SoundManager.isMuted ? '🌌 Sound Muted' : '⭐ Sound Enabled');
+            }
+            
+            // Notification function
+            function showSoundNotification(message) {
+                const notification = document.createElement('div');
+                notification.innerHTML = `
+                    <div style="
+                        position: fixed; 
+                        top: 90px; 
+                        right: 20px; 
+                        background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(20, 30, 50, 0.9)); 
+                        color: #00ffff; 
+                        padding: 15px 25px; 
+                        border-radius: 30px; 
+                        font-size: 14px; 
+                        font-weight: 600;
+                        z-index: 1001;
+                        transform: translateX(100%);
+                        transition: transform 0.4s ease;
+                        border: 2px solid rgba(0, 255, 255, 0.3);
+                        backdrop-filter: blur(15px);
+                        -webkit-backdrop-filter: blur(15px);
+                        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+                        text-shadow: 0 0 5px #00ffff;
+                    ">
+                        ${message}
+                    </div>
+                `;
+                document.body.appendChild(notification);
+                
+                // Animate in
+                setTimeout(() => {
+                    notification.querySelector('div').style.transform = 'translateX(0)';
+                }, 100);
+                
+                // Remove after 3 seconds
+                setTimeout(() => {
+                    notification.querySelector('div').style.transform = 'translateX(100%)';
+                    setTimeout(() => notification.remove(), 400);
+                }, 3000);
+            }
+            
+            // Add CSS animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes rotate {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+                
+                @keyframes cosmicPulse {
+                    0% { 
+                        transform: scale(1) rotate(0deg);
+                        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(255, 20, 147, 0.1);
+                    }
+                    50% { 
+                        transform: scale(1.3) rotate(180deg);
+                        box-shadow: 0 0 40px rgba(0, 255, 255, 0.6), inset 0 0 40px rgba(255, 20, 147, 0.3);
+                    }
+                    100% { 
+                        transform: scale(1) rotate(360deg);
+                        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(255, 20, 147, 0.1);
+                    }
+                }
+                
+                .sound-control-btn:hover {
+                    transform: scale(1.15) rotate(5deg) !important;
+                    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), inset 0 0 30px rgba(255, 20, 147, 0.2) !important;
+                }
+                
+                .sound-control-btn:active {
+                    transform: scale(0.95) rotate(-5deg) !important;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Update indicator when sound is toggled
+            document.addEventListener('keydown', (e) => {
+                if (e.key.toLowerCase() === 'm') {
+                    toggleSound();
+                }
+            });
+        </script>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+            const navbar = document.querySelector('.navbar');
+
+            // Toggle mobile menu
+            menuIcon.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                menuIcon.classList.toggle('active');
+            });
+
+            // Add scrolled class to navbar
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // ROCKET MOUSE-FOLLOW SCRIPT
+            const rocket = document.getElementById('rocket');
+            if (rocket) {
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+                
+                // Use objects to store rocket's position and velocity for smoother animation
+                let position = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+                let velocity = { x: 0, y: 0 };
+                let angle = 0;
+                
+                const easing = 0.08; // How quickly the rocket follows the mouse (lower is smoother)
+                
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateRocket() {
+                    // Calculate distance to target
+                    let dx = mouseX - position.x;
+                    let dy = mouseY - position.y;
+                    
+                    // Accelerate towards the target
+                    velocity.x = dx * easing;
+                    velocity.y = dy * easing;
+                    
+                    // Update position
+                    position.x += velocity.x;
+                    position.y += velocity.y;
+                    
+                // Calculate angle for rotation
+                    let targetAngle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
+                    
+                    // Smoothly rotate towards the target angle
+                    angle += (targetAngle - angle) * 0.1;
+                    
+                    // Apply transformations
+                    rocket.style.left = position.x + 'px';
+                    rocket.style.top = position.y + 'px';
+                    rocket.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+                    
+                    // Continue the animation loop
+                requestAnimationFrame(animateRocket);
+                }
+                
+                // Start the animation
+                animateRocket();
+            }
+        });
+        </script>
+</body>
+</html>

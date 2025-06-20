@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Jashan's Portfolio</title>
+  <link rel="stylesheet" href="project.css">
+  <link rel="icon" type="image/png" href="images/idea.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      /* Option 1: Modern Purple to Blue Gradient */
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      /* Option 2: Soft Ocean Gradient */
+      /* background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); */
+      /* Option 3: Warm Sunset Gradient */
+      /* background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); */
+      color: #fff;
+      padding-top: 100px; /* Space for fixed header and animated title */
+    }
+
+    /* Header Styles */
+    header {
+      display: flex;
+      flex-direction: column;
+      background: rgba(51, 51, 51, 0.95);
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      width: 100%;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .brand:hover {
+      transform: translateY(-2px);
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background: #fff;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-links li a:hover::after {
+      width: 80%;
+    }
+
+    .nav-links li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .menu-icon .bar {
+      background: #fff;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      transition: all 0.3s ease;
+      border-radius: 3px;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-section h2 {
+      font-size: 2rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 15px;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 15px 20px;
+      }
+
+      .menu-icon {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(51, 51, 51, 0.98);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        width: 200px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .nav-links li a {
+        display: block;
+        padding: 10px 15px;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Page Title */
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2.5rem;
+      color: #444;
+    }
+
+    /* Project Section */
+    #my-works {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      overflow: hidden;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.3s ease;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .project-content h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .project-content a {
+      text-decoration: none;
+      color: #fff;
+      background: #007bff;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .project-content a:hover {
+      background: #0056b3;
+    }
+
+    .project-card:hover {
+      transform: translateY(0) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .project-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Space Background -->
+  <div class="space-background">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="space-nav">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="planet-logo">
+          <div class="planet-core"></div>
+          <div class="planet-ring"></div>
+        </div>
+        <span class="brand-text">Jashan</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link active">Projects</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">My <span class="highlight">Projects</span></h1>
+      <p class="hero-subtitle">Exploring the universe of web development, one project at a time.</p>
+    </div>
+    </section>
+
+  <!-- Projects Grid -->
+  <section class="projects-section">
+    <div class="container">
+      <div class="projects-grid">
+        <!-- Online Book Library -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/Books.png" alt="Online Book Library Project">
+          </div>
+        <div class="project-content">
+            <h3>Online Book Library</h3>
+            <p>A digital library platform with search functionality and user authentication.</p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Express</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Jashanpreet1234/Books.io" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Code</a>
+              <a href="https://jashanpreet1234.github.io/Books.io/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </div>
+        </article>
+
+        <!-- Capitals Game -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/capitals.png" alt="Capitals Game Project">
+          </div>
+        <div class="project-content">
+            <h3>Capitals Game</h3>
+            <p>An educational game to learn world capitals with interactive gameplay and scoring system.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Jashanpreet1234/country-capitals-quiz" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Code</a>
+              <a href="https://jashanpreet1234.github.io/country-capitals-quiz/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </div>
+        </article>
+     
+        <!-- Makeup Project -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/makeup.png" alt="Makeup Project">
+          </div>
+        <div class="project-content">
+            <h3>Makeup Store</h3>
+            <p>A modern e-commerce platform for makeup products with beautiful design and smooth animations.</p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Jashanpreet1234/MakeUp.io" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Code</a>
+              <a href="https://jashanpreet1234.github.io/MakeUp.io/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </div>
+        </article>
+
+        <!-- Quote Generator -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/Inspirational_Quote_generator.png" alt="Quote Generator Project">
+          </div>
+        <div class="project-content">
+            <h3>Quote Generator</h3>
+            <p>A dynamic web application that generates inspirational quotes with beautiful animations and transitions.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Jashanpreet1234/quoteGenerator.github.io" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Code</a>
+              <a href="https://jashanpreet1234.github.io/quoteGenerator.github.io/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </div>
+        </article>
+
+        <!-- Animated Background -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/animated_background.png" alt="Animated Background Project">
+          </div>
+      <div class="project-content">
+            <h3>Animated Background</h3>
+            <p>An interactive background animation created using HTML Canvas and JavaScript particles.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Canvas</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jashan-io/animated-background" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Code</a>
+              <a href="https://jashan-io.github.io/animated-background" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    </section>
+
+  <footer class="space-footer">
+    <div class="container">
+      <p>&copy; 2024 Jashan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation Toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+    
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      navToggle.classList.toggle('active');
+      body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+    });
+
+    // Close mobile menu when clicking a link
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+        body.style.overflow = '';
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('active') && 
+          !navLinks.contains(e.target) && 
+          !navToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+        body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
+
