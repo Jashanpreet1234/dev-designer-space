@@ -1,0 +1,590 @@
+/*
+ * Galaxy Space Portfolio - Dark Cosmic Theme
+ */
+
+/* --- Global Styles --- */
+body {
+    background: linear-gradient(135deg, #000000 0%, #0d1421 25%, #1a1a2e 50%, #16213e 75%, #000000 100%);
+    background-attachment: fixed;
+    color: #e8e8e8;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.4), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.7), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- Particles Background --- */
+#particles-js-portfolio {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* --- Portfolio Section --- */
+.portfolio-section {
+    position: relative;
+    z-index: 3;
+    padding: 2rem 1rem 5rem;
+    min-height: 100vh;
+}
+
+/* --- Header Section --- */
+.portfolio-header {
+    text-align: center;
+    padding: 3rem 0 4rem;
+    position: relative;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.glitch-text {
+    background: linear-gradient(45deg, #9f4bff, #ff4b9f, #4bffff, #9f4bff);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    animation: galaxy-gradient 4s ease-in-out infinite, float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(159, 75, 255, 0.5));
+}
+
+@keyframes galaxy-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #b8b8b8;
+    margin: 1rem 0 2rem;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(184, 184, 184, 0.3);
+}
+
+.mission-status-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 26, 46, 0.9));
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(159, 75, 255, 0.3);
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 
+        0 0 30px rgba(159, 75, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: pulse-border 3s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+    0%, 100% { border-color: rgba(159, 75, 255, 0.3); }
+    50% { border-color: rgba(159, 75, 255, 0.7); }
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #9f4bff;
+    font-weight: 600;
+}
+
+.status-indicator i {
+    color: #ff4bff;
+    animation: rotate 4s linear infinite, glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes glow-pulse {
+    from { text-shadow: 0 0 5px #ff4bff; }
+    to { text-shadow: 0 0 20px #ff4bff, 0 0 30px #ff4bff; }
+}
+
+.mission-count {
+    color: #e8e8e8;
+    font-weight: 600;
+}
+
+#mission-counter {
+    color: #4bffff;
+    font-weight: 700;
+    text-shadow: 0 0 10px #4bffff;
+}
+
+/* --- Portfolio Grid --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- Space Capsule Cards --- */
+.space-capsule {
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(26, 26, 46, 0.8) 25%, 
+        rgba(13, 20, 33, 0.9) 75%, 
+        rgba(0, 0, 0, 0.95) 100%);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(159, 75, 255, 0.2);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.8),
+        0 5px 15px rgba(159, 75, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.space-capsule::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, 
+        transparent, 
+        rgba(159, 75, 255, 0.4), 
+        rgba(255, 75, 159, 0.4),
+        rgba(75, 255, 255, 0.4),
+        transparent);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: cosmic-border 8s linear infinite;
+}
+
+@keyframes cosmic-border {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.space-capsule:hover::before {
+    opacity: 1;
+}
+
+.space-capsule:hover {
+    transform: translateY(-20px) scale(1.03);
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.9),
+        0 10px 30px rgba(159, 75, 255, 0.3),
+        0 0 50px rgba(159, 75, 255, 0.2);
+    border-color: rgba(159, 75, 255, 0.6);
+}
+
+/* --- Capsule Header --- */
+.capsule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(26, 26, 46, 0.4));
+    border-bottom: 1px solid rgba(159, 75, 255, 0.3);
+}
+
+.mission-id {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: #9f4bff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(159, 75, 255, 0.5);
+}
+
+.mission-status {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-status.active {
+    background: linear-gradient(135deg, #ff4bff, #9f4bff);
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 75, 255, 0.5);
+    animation: active-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes active-glow {
+    from { box-shadow: 0 0 20px rgba(255, 75, 255, 0.5); }
+    to { box-shadow: 0 0 30px rgba(255, 75, 255, 0.8); }
+}
+
+.mission-status.completed {
+    background: linear-gradient(135deg, #4bffff, #9f4bff);
+    color: #000;
+    box-shadow: 0 0 20px rgba(75, 255, 255, 0.5);
+}
+
+/* --- Capsule Window --- */
+.capsule-window {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    border-bottom: 1px solid rgba(159, 75, 255, 0.2);
+}
+
+.capsule-window img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.8) contrast(1.1);
+}
+
+.space-capsule:hover .capsule-window img {
+    transform: scale(1.15);
+    filter: brightness(1.1) contrast(1.2);
+}
+
+.window-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        transparent, 
+        rgba(159, 75, 255, 0.1), 
+        rgba(255, 75, 159, 0.1),
+        transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.space-capsule:hover .window-overlay {
+    opacity: 1;
+}
+
+/* --- Mission Details --- */
+.mission-details {
+    padding: 2rem;
+}
+
+.project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #ffffff, #e8e8e8, #b8b8b8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.project-description {
+    color: #b8b8b8;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* --- Tech Stack --- */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.power-cell {
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.power-cell::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.power-cell:hover::before {
+    left: 100%;
+}
+
+.power-cell.react {
+    background: rgba(97, 218, 251, 0.05);
+    color: #61dafb;
+    border-color: #61dafb;
+    box-shadow: 0 0 15px rgba(97, 218, 251, 0.2);
+}
+
+.power-cell.node {
+    background: rgba(104, 160, 99, 0.05);
+    color: #68a063;
+    border-color: #68a063;
+    box-shadow: 0 0 15px rgba(104, 160, 99, 0.2);
+}
+
+.power-cell.mongo {
+    background: rgba(77, 153, 77, 0.05);
+    color: #4d994d;
+    border-color: #4d994d;
+    box-shadow: 0 0 15px rgba(77, 153, 77, 0.2);
+}
+
+.power-cell.express {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.power-cell.css {
+    background: rgba(21, 114, 182, 0.05);
+    color: #1572b6;
+    border-color: #1572b6;
+    box-shadow: 0 0 15px rgba(21, 114, 182, 0.2);
+}
+
+.power-cell.html {
+    background: rgba(228, 77, 38, 0.05);
+    color: #e44d26;
+    border-color: #e44d26;
+    box-shadow: 0 0 15px rgba(228, 77, 38, 0.2);
+}
+
+.power-cell.js {
+    background: rgba(247, 223, 30, 0.05);
+    color: #f7df1e;
+    border-color: #f7df1e;
+    box-shadow: 0 0 15px rgba(247, 223, 30, 0.2);
+}
+
+.power-cell.api {
+    background: rgba(159, 75, 255, 0.05);
+    color: #9f4bff;
+    border-color: #9f4bff;
+    box-shadow: 0 0 15px rgba(159, 75, 255, 0.2);
+}
+
+.power-cell.php {
+    background: rgba(119, 123, 180, 0.05);
+    color: #777bb4;
+    border-color: #777bb4;
+    box-shadow: 0 0 15px rgba(119, 123, 180, 0.2);
+}
+
+.power-cell:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px currentColor;
+}
+
+/* --- Mission Metrics --- */
+.mission-metrics {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(26, 26, 46, 0.4));
+    border-radius: 15px;
+    border: 1px solid rgba(159, 75, 255, 0.3);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.metric {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b8b8b8;
+    font-size: 0.9rem;
+}
+
+.metric i {
+    color: #9f4bff;
+    text-shadow: 0 0 10px rgba(159, 75, 255, 0.5);
+}
+
+.metric span {
+    font-weight: 600;
+    color: #e8e8e8;
+}
+
+/* --- Control Panel --- */
+.control-panel {
+    display: flex;
+    gap: 1rem;
+}
+
+.launch-btn, .deploy-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.launch-btn {
+    background: linear-gradient(135deg, #9f4bff, #ff4bff);
+    color: #000;
+    border: 2px solid #9f4bff;
+    box-shadow: 0 0 20px rgba(159, 75, 255, 0.3);
+}
+
+.launch-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(159, 75, 255, 0.5);
+    color: #000;
+}
+
+.deploy-btn {
+    background: transparent;
+    color: #4bffff;
+    border: 2px solid #4bffff;
+    box-shadow: 0 0 20px rgba(75, 255, 255, 0.2);
+}
+
+.deploy-btn:hover {
+    background: linear-gradient(135deg, #4bffff, #9f4bff);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(75, 255, 255, 0.5);
+}
+
+/* Button ripple effect */
+.launch-btn:active, .deploy-btn:active {
+    transform: translateY(0);
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple-animation 0.8s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(6);
+        opacity: 0;
+    }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    .space-capsule {
+        margin: 0 0.5rem;
+    }
+    
+    .mission-status-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .mission-metrics {
+        justify-content: space-around;
+    }
+    
+    .control-panel {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-header {
+        padding: 2rem 0 3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .mission-details {
+        padding: 1.5rem;
+    }
+    
+    .project-tech {
+        justify-content: center;
+    }
+} 

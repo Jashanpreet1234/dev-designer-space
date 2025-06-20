@@ -1,0 +1,38 @@
+.nav-links a.active {
+    color: #00bcd4; /* Cyan color for the active link */
+    border-bottom: 2px solid #00bcd4; /* Underline for active link */
+    padding-bottom: 5px; /* Add some space for the line */
+    border-top: none; /* Remove the line on top */
+}
+
+.nav-links li a {
+    position: relative; /* This is crucial for containing the ::before element */
+    padding-bottom: 8px; /* Add some space for the underline */
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00bcd4;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::before,
+.nav-links li a.active::before {
+    width: 100%; /* Animate the underline to full width */
+}
+
+/* Forcefully remove the old, conflicting active style */
+.nav-links a.active {
+   border: none !important; /* Ensure no border is ever applied */
+   padding-bottom: 8px;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #00bcd4 !important; /* Force color change */
+} 

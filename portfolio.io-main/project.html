@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jashanpreet Kaur - Mission Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <link rel="stylesheet" type="text/css" href="portfolio-override.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+    <link rel="icon" type="x-icon" href="images/favicon.ico">
+    
+    <!-- Particles.js for background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Audio Elements for UI Sounds -->
+    <audio id="entrance-sound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+    </audio>
+    <audio id="hover-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-09.wav" type="audio/wav">
+    </audio>
+    <audio id="click-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-10.wav" type="audio/wav">
+    </audio>
+</head>
+<body>
+    <div id="particles-js-portfolio"></div>
+    
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">Jashan</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education-section">Education</a></li>
+            <li><a href="project.html">Portfolio</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section class="portfolio-section">
+        <div class="portfolio-header">
+            <h1 class="section-title">
+                <span class="glitch-text">Mission Portfolio</span>
+            </h1>
+            <p class="section-subtitle">Explore completed space missions and ongoing expeditions</p>
+            <div class="mission-status-bar">
+                <span class="status-indicator">
+                    <i class="fas fa-satellite"></i>
+                    <span>Systems Online</span>
+                </span>
+                <span class="mission-count">Active Missions: <span id="mission-counter">6</span></span>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- Mission 1: Book Quest -->
+            <div class="space-capsule" data-mission="1">
+                <div class="capsule-header">
+                    <div class="mission-id">MISSION-001</div>
+                    <div class="mission-status active">ACTIVE</div>
+                </div>
+                <div class="capsule-window">
+                    <img src="images/Books.png" alt="Book Quest Project">
+                    <div class="window-overlay"></div>
+                </div>
+                <div class="mission-details">
+                    <h3 class="project-title">Book Quest</h3>
+                    <p class="project-description">Navigate through a vast digital library with advanced search capabilities and user authentication systems.</p>
+                    <div class="project-tech">
+                        <span class="power-cell react">REACT</span>
+                        <span class="power-cell node">NODE.JS</span>
+                        <span class="power-cell mongo">MONGODB</span>
+                        <span class="power-cell express">EXPRESS</span>
+                    </div>
+                    <div class="mission-metrics">
+                        <div class="metric">
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-code-branch"></i>
+                            <span>12</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-eye"></i>
+                            <span>89</span>
+                        </div>
+                    </div>
+                    <div class="control-panel">
+                        <a href="https://github.com/Jashanpreet1234/Books.io" class="launch-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-code"></i>
+                            <span>Launch Code</span>
+                        </a>
+                        <a href="https://jashanpreet1234.github.io/Books.io/" class="deploy-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-rocket"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 2: Beauty Command -->
+            <div class="space-capsule" data-mission="2">
+                <div class="capsule-header">
+                    <div class="mission-id">MISSION-002</div>
+                    <div class="mission-status active">ACTIVE</div>
+                </div>
+                <div class="capsule-window">
+                    <img src="images/makeup.png" alt="Beauty Command Project">
+                    <div class="window-overlay"></div>
+                </div>
+                <div class="mission-details">
+                    <h3 class="project-title">Beauty Command</h3>
+                    <p class="project-description">Advanced e-commerce platform with beautiful design, smooth animations, and stellar user experience.</p>
+                    <div class="project-tech">
+                        <span class="power-cell react">REACT</span>
+                        <span class="power-cell css">CSS3</span>
+                        <span class="power-cell api">API</span>
+                        <span class="power-cell js">JAVASCRIPT</span>
+                    </div>
+                    <div class="mission-metrics">
+                        <div class="metric">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-code-branch"></i>
+                            <span>8</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-eye"></i>
+                            <span>156</span>
+                        </div>
+                    </div>
+                    <div class="control-panel">
+                        <a href="https://github.com/Jashanpreet1234/MakeUp.io" class="launch-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-code"></i>
+                            <span>Launch Code</span>
+                        </a>
+                        <a href="https://jashanpreet1234.github.io/MakeUp.io/" class="deploy-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-rocket"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 3: Capitals Game -->
+            <div class="space-capsule" data-mission="3">
+                <div class="capsule-header">
+                    <div class="mission-id">MISSION-003</div>
+                    <div class="mission-status completed">COMPLETED</div>
+                </div>
+                <div class="capsule-window">
+                    <img src="images/capitals.png" alt="Capitals Game Project">
+                    <div class="window-overlay"></div>
+                </div>
+                <div class="mission-details">
+                    <h3 class="project-title">Capitals Explorer</h3>
+                    <p class="project-description">Interactive educational game to learn world capitals with engaging gameplay and scoring system.</p>
+                    <div class="project-tech">
+                        <span class="power-cell html">HTML5</span>
+                        <span class="power-cell css">CSS3</span>
+                        <span class="power-cell js">JAVASCRIPT</span>
+                    </div>
+                    <div class="mission-metrics">
+                        <div class="metric">
+                            <i class="fas fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-code-branch"></i>
+                            <span>5</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-eye"></i>
+                            <span>67</span>
+                        </div>
+                    </div>
+                    <div class="control-panel">
+                        <a href="#" class="launch-btn">
+                            <i class="fas fa-code"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="#" class="deploy-btn">
+                            <i class="fas fa-rocket"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 4: Quote Generator -->
+            <div class="space-capsule" data-mission="4">
+                <div class="capsule-header">
+                    <div class="mission-id">MISSION-004</div>
+                    <div class="mission-status completed">COMPLETED</div>
+                </div>
+                <div class="capsule-window">
+                    <img src="images/Inspirational_Quote_generator.png" alt="Quote Generator Project">
+                    <div class="window-overlay"></div>
+                </div>
+                <div class="mission-details">
+                    <h3 class="project-title">Quote Generator</h3>
+                    <p class="project-description">Dynamic web application that generates inspirational quotes with beautiful animations and transitions.</p>
+                    <div class="project-tech">
+                        <span class="power-cell html">HTML5</span>
+                        <span class="power-cell css">CSS3</span>
+                        <span class="power-cell js">JAVASCRIPT</span>
+                    </div>
+                    <div class="mission-metrics">
+                        <div class="metric">
+                            <i class="fas fa-star"></i>
+                            <span>4.2</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-code-branch"></i>
+                            <span>3</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-eye"></i>
+                            <span>45</span>
+                        </div>
+                    </div>
+                    <div class="control-panel">
+                        <a href="#" class="launch-btn">
+                            <i class="fas fa-code"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="#" class="deploy-btn">
+                            <i class="fas fa-rocket"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 5: Burger Signup -->
+            <div class="space-capsule" data-mission="5">
+                <div class="capsule-header">
+                    <div class="mission-id">MISSION-005</div>
+                    <div class="mission-status active">ACTIVE</div>
+                </div>
+                <div class="capsule-window">
+                    <img src="images/Burger_signup.png" alt="Burger Signup Project">
+                    <div class="window-overlay"></div>
+                </div>
+                <div class="mission-details">
+                    <h3 class="project-title">Burger Station</h3>
+                    <p class="project-description">Modern restaurant signup platform with sleek design and user-friendly registration system.</p>
+                    <div class="project-tech">
+                        <span class="power-cell html">HTML5</span>
+                        <span class="power-cell css">CSS3</span>
+                        <span class="power-cell js">JAVASCRIPT</span>
+                        <span class="power-cell php">PHP</span>
+                    </div>
+                    <div class="mission-metrics">
+                        <div class="metric">
+                            <i class="fas fa-star"></i>
+                            <span>4.6</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-code-branch"></i>
+                            <span>6</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-eye"></i>
+                            <span>78</span>
+                        </div>
+                    </div>
+                    <div class="control-panel">
+                        <a href="#" class="launch-btn">
+                            <i class="fas fa-code"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="#" class="deploy-btn">
+                            <i class="fas fa-rocket"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 6: Kitten Subscription -->
+            <div class="space-capsule" data-mission="6">
+                <div class="capsule-header">
+                    <div class="mission-id">MISSION-006</div>
+                    <div class="mission-status active">ACTIVE</div>
+                </div>
+                <div class="capsule-window">
+                    <img src="images/Weekly-Kitten-Subscription.png" alt="Kitten Subscription Project">
+                    <div class="window-overlay"></div>
+                </div>
+                <div class="mission-details">
+                    <h3 class="project-title">Kitten Command</h3>
+                    <p class="project-description">Adorable subscription service platform with weekly kitten deliveries and premium membership features.</p>
+                    <div class="project-tech">
+                        <span class="power-cell html">HTML5</span>
+                        <span class="power-cell css">CSS3</span>
+                        <span class="power-cell js">JAVASCRIPT</span>
+                        <span class="power-cell react">REACT</span>
+                    </div>
+                    <div class="mission-metrics">
+                        <div class="metric">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-code-branch"></i>
+                            <span>9</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-eye"></i>
+                            <span>123</span>
+                        </div>
+                    </div>
+                    <div class="control-panel">
+                        <a href="#" class="launch-btn">
+                            <i class="fas fa-code"></i>
+                            <span>View Code</span>
+                        </a>
+                        <a href="#" class="deploy-btn">
+                            <i class="fas fa-rocket"></i>
+                            <span>Live Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize galaxy particles for portfolio background
+        particlesJS('particles-js-portfolio', {
+            "particles": {
+                "number": { "value": 120, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": ["#9f4bff", "#ff4bff", "#4bffff", "#ffffff"] },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+                "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.5, "sync": false } },
+                "line_linked": { "enable": true, "distance": 120, "color": "#9f4bff", "opacity": 0.3, "width": 1 },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { 
+                    "bubble": { "distance": 200, "size": 8, "duration": 2, "opacity": 0.8, "speed": 3 },
+                    "push": { "particles_nb": 6 }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Enhanced interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            const capsules = document.querySelectorAll('.space-capsule');
+            
+            // Add sound effects
+            const hoverSound = document.getElementById('hover-sound');
+            const clickSound = document.getElementById('click-sound');
+            
+            function playHoverSound() {
+                if (hoverSound && hoverSound.readyState >= 2) {
+                    hoverSound.currentTime = 0;
+                    hoverSound.volume = 0.3;
+                    hoverSound.play().catch(e => console.log('Sound play failed'));
+                }
+            }
+            
+            function playClickSound() {
+                if (clickSound && clickSound.readyState >= 2) {
+                    clickSound.currentTime = 0;
+                    clickSound.volume = 0.5;
+                    clickSound.play().catch(e => console.log('Sound play failed'));
+                }
+            }
+            
+            // Enhanced capsule interactions
+            capsules.forEach((capsule, index) => {
+                // Staggered entrance animation
+                capsule.style.opacity = '0';
+                capsule.style.transform = 'translateY(50px)';
+                
+                setTimeout(() => {
+                    capsule.style.transition = 'all 0.8s ease-out';
+                    capsule.style.opacity = '1';
+                    capsule.style.transform = 'translateY(0)';
+                }, index * 200);
+                
+                // Hover effects
+                capsule.addEventListener('mouseenter', function() {
+                    playHoverSound();
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+                
+                capsule.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Button click effects
+            const buttons = document.querySelectorAll('.launch-btn, .deploy-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    playClickSound();
+                    
+                    // Add ripple effect
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 1000);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jashanpreet Kaur - Rocket</title>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <link rel="stylesheet" type="text/css" href="timeline-override.css">
+    <link rel="stylesheet" type="text/css" href="rocket-design.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="icon" type="x-icon" href="images/favicon.ico">
+
+    <!-- Audio Elements for UI Sounds -->
+    <audio id="entrance-sound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+    </audio>
+    <audio id="hover-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-09.wav" type="audio/wav">
+    </audio>
+    <audio id="click-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-10.wav" type="audio/wav">
+    </audio>
+    <audio id="rocket-thruster-sound" preload="auto" loop>
+        <source src="https://www.soundjay.com/mechanical/sounds/mechanical-saw-01.wav" type="audio/wav">
+    </audio>
+</head>
+<body>
+    <div id="rocket">
+        <div class="rocket-body">
+            <div class="window"></div>
+        </div>
+        <div class="fin fin-left"></div>
+        <div class="fin fin-right"></div>
+        <div class="flame"></div>
+    </div>
+    <nav class="navbar">
+        <a href="#home" class="navbar-brand">Jashan</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education-section">Education</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="timeline" id="education-section">
+        <div class="col-full text-pretitle">
+            <a href="#courses" class="section-link">Education <i class="fas fa-link"></i></a>
+        </div>
+        <div class="col-full timeline__block" data-aos="fade-up">
+    <section id="courses">
+        <h3 class="section-heading">
+            <span><i class="fas fa-graduation-cap"></i></span>
+            <a href="#education-section" class="section-link">
+                <span>Courses and Software</span> <i class="fas fa-link"></i>
+            </a>
+        </h3>
+
+        <div id="courses-timeline">
+            <div class="timeline-line"></div>
+            <div class="flying-plane">
+                <i class="fas fa-rocket"></i>
+            </div>
+            
+            <div class="timeline-item left">
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Java with Object Oriented Programming</h4>
+                        <p class="timeline-description">Eclipse, Netbeans, and IntelliJ. Comprehensive understanding of OOP concepts, inheritance, polymorphism, and design patterns.</p>
+                        <div class="timeline-date">2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Database Management</h4>
+                        <p class="timeline-description">MySQL, SQL Server, Oracle Database, PostgreSQL managed by DBMS. Advanced querying, optimization, and database design.</p>
+                        <div class="timeline-date">2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ... and so on for all the other timeline items ... -->
+
+        </div>
+    </section>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div id="particles-js-contact"></div>
+        <div class="contact-content-wrapper">
+            <div class="contact-header">
+                <h3 class="section-heading">
+                    <span><i class="fas fa-satellite-dish"></i></span>
+                    <span>Mission Control Center</span>
+                </h3>
+            </div>
+            <div class="contact-body">
+                <!-- Left Side - Transmission Console -->
+                <div class="transmission-console">
+                    <h4><i class="fas fa-broadcast-tower"></i> Transmission Console</h4>
+                    <div class="commander-name">Commander Name:</div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Identity Code</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency">Communication Frequency</label>
+                            <input type="email" id="frequency" name="email" placeholder="your.email@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Transmission Content</label>
+                            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-rocket"></i> Send Transmission
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Right Side - Establish Contact -->
+                <div class="establish-contact">
+                    <h4><i class="fas fa-satellite"></i> Establish Contact</h4>
+                    <p class="mission-description">
+                        Ready to launch your next project? Connect through these communication channels:
+                    </p>
+                    <ul class="contact-links-list">
+                        <li>
+                            <a href="mailto:your.email@domain.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <div class="link-text">Send Email Transmission</div>
+                                    <div class="link-description">Direct communication line</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <div class="link-text">Access Code Repository</div>
+                                    <div class="link-description">View mission archives</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <div class="link-text">Connect on LinkedIn</div>
+                                    <div class="link-description">Professional network access</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+1234567890" class="contact-link">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <div class="link-text">Direct Communication Line</div>
+                                    <div class="link-description">Voice contact protocol</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="particles-header.js"></script>
+    <script src="sounds.js"></script>
+    <script src="rocket-movement.js"></script>
+</body>
+</html> 
