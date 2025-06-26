@@ -9,7 +9,7 @@
 
 **🌟 A futuristic, space-themed portfolio showcasing web development skills with stunning animations and interactive elements 🌟**
 
-[🌐 **Live Demo**](https://jashanpreet1234.github.io/dev-designer-space/) • [📧 **Contact**](mailto:jashanpreetkaur2904@gmail.com) • [💼 **LinkedIn**](https://www.linkedin.com/in/yourprofile)
+[🌐 **Live Demo**](https://jashanpreet1234.github.io/dev-designer-space/) • [📧 **Contact**](mailto:jashanpreetkaur2904@gmail.com) • [💼 **LinkedIn**](https://www.linkedin.com/in/jashanpreet-jashan-kaur-9aaa40232/)
 
 </div>
 
