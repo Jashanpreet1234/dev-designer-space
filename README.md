@@ -326,7 +326,7 @@ MIT License - Feel free to explore, modify, and use this code for your own space
 **Commander Jashan** 👩‍🚀
 
 [![Email](https://img.shields.io/badge/Email-jashanpreetkaur2904%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jashanpreetkaur2904@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yourprofile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jashanpreet-jashan-kaur-9aaa40232/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jashanpreet1234)
 
 **"The fact that programming is enjoyable makes me keen to learn new programming languages. Additionally, if I love something, I can easily add beauty to it."** ⭐
