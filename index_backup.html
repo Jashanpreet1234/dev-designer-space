@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jashanpreet Kaur - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <link rel="stylesheet" type="text/css" href="timeline-override.css">
+    <link rel="stylesheet" type="text/css" href="rocket-design.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="icon" type="x-icon" href="images/favicon.ico">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Jashanpreet Kaur - Full Stack Web Developer & Designer. Experienced in React, Node.js, Python, and modern web technologies.">
+    <meta name="keywords" content="web developer, web designer, full stack, React, Node.js, JavaScript, portfolio">
+    <meta name="author" content="Jashanpreet Kaur">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jashanpreet Kaur - Web Developer & Designer">
+    <meta property="og:description" content="Experienced Full Stack Developer specializing in modern web technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="navbar-brand">Jashan</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Education</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    
+    <header id="body-header">
+        <div class="header-content">
+            <h1>Jashan</h1>
+            <p>Web Developer & Web Designer</p>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+    
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2 class="section-heading">About Me</h2>
+                <div id="about-para">
+                    <p>
+                        Hello! I'm Jashanpreet Kaur, a passionate web developer and designer with expertise in creating 
+                        modern, responsive web applications. I specialize in front-end and back-end development using 
+                        the latest technologies and frameworks.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-heading">Skills</h2>
+                <div id="skill-set">
+                    <div class="skill-percent percent80">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-percent percent75">
+                        <span>React</span>
+                    </div>
+                    <div class="skill-percent percent70">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-percent percent65">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-percent percent75">
+                        <span>CSS/HTML</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses">
+            <div class="container">
+                <h2 class="section-heading">Education</h2>
+                <div id="education">
+                    <div id="edu-box">
+                        <div id="education-div">
+                            <div class="content">
+                                <h3 class="orange-heading">Web Development Bootcamp</h3>
+                                <p>Completed comprehensive training in full-stack web development</p>
+                            </div>
+                        </div>
+                        <div id="education-div">
+                            <div class="content">
+                                <h3 class="orange-heading">Computer Science</h3>
+                                <p>Bachelor's degree with focus on software engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <h2 class="section-heading">Portfolio</h2>
+                <div id="portfolio-set">
+                    <div id="portfolio-items">
+                        <p>Check out my latest projects and work samples.</p>
+                        <div class="glow-on-hover">
+                            <a href="project.html">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-heading">Contact</h2>
+                <div id="feedback">
+                    <form action="#" method="post">
+                        <input type="text" name="name" placeholder="Your Name" class="fields" required>
+                        <input type="email" name="email" placeholder="Your Email" class="fields" required>
+                        <textarea name="message" placeholder="Your Message" class="fields" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <div id="contact-details">
+                        <h6>Get In Touch</h6>
+                        <p>Feel free to reach out for collaboration or just to say hello!</p>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fab fa-github"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple navigation toggle
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.classList.toggle('active');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

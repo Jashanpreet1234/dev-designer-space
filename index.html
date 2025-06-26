@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jashanpreet Kaur - Rocket</title>
+    <title>Jashanpreet Kaur - Portfolio</title>
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="navigation.css">
@@ -12,6 +12,79 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="icon" type="x-icon" href="images/favicon.ico">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Jashanpreet Kaur - Full Stack Web Developer & Designer. Experienced in React, Node.js, Python, and modern web technologies.">
+    <meta name="keywords" content="web developer, web designer, full stack, React, Node.js, JavaScript, portfolio">
+    <meta name="author" content="Jashanpreet Kaur">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jashanpreet Kaur - Web Developer & Designer">
+    <meta property="og:description" content="Experienced Full Stack Developer specializing in modern web technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    
+    <!-- Loading Screen Styles -->
+    <style>
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loading-rocket {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50% 50% 50% 70%;
+            position: relative;
+            animation: rocket-spin 2s linear infinite;
+        }
+        
+        .loading-rocket::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ff9500, #ff6b00);
+            border-radius: 50%;
+            animation: flame-flicker 0.3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes rocket-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes flame-flicker {
+            0% { transform: translateX(-50%) scale(1); }
+            100% { transform: translateX(-50%) scale(1.2); }
+        }
+        
+        .loading-text {
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-top: 30px;
+            font-size: 18px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+    </style>
     
     <!-- Audio for page entrance sound -->
     <audio id="entrance-sound" preload="auto">
@@ -44,6 +117,59 @@
     </audio>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-animation">
+                <div class="rocket-container">
+                    <div class="rocket">🚀</div>
+                    <div class="rocket-trail"></div>
+                </div>
+                <div class="loading-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
+            </div>
+            <div class="loading-text-container">
+                <div class="loading-text">Launching Portfolio</div>
+                <div class="loading-dots">
+                    <span class="dot dot-1">.</span>
+                    <span class="dot dot-2">.</span>
+                    <span class="dot dot-3">.</span>
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+                <div class="progress-glow"></div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+    
+    <!-- Full page background particles -->
+    <div id="particles-js-background"></div>
+    
+    <!-- Enhanced Cosmic Particle System -->
+    <div class="cosmic-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <!-- Cosmic Dust Effect -->
+    <div class="cosmic-dust"></div>
+    
+    <!-- Hyperspace Tunnel Effect -->
+    <div class="hyperspace-tunnel"></div>
+    
         <!-- Navigation -->
         <nav class="navbar">
             <a href="#home" class="navbar-brand">Jashan</a>
@@ -75,32 +201,48 @@
     <main>
 
         <section id="about">
-            <div id="about-para">
-                <p>   
-                    I am a passionate and skilled IT professional with hands-on experience across multiple sectors, from IT support and code optimization to user research and network management. I have worked on a variety of technical projects, including SSO integration, accessibility improvements, and website optimization, excelling in fast-paced, collaborative environments. With a diploma in Computer Programming from Algonquin College, I am well-versed in a range of programming languages and tools, making me a valuable asset to any team focused on enhancing technology performance and user experiences.
-                 
+            <div class="animated-bio-container">
+                <div class="stats-dashboard">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-target="50000">0</div>
+                            <div class="stat-label">Lines of Code</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-target="25">0</div>
+                            <div class="stat-label">Projects Built</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-target="1000">0</div>
+                            <div class="stat-label">Cups of Coffee</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </section>
 
-        <!-- ROCKET ELEMENT -->
-        <!-- <div id="rocket">
-            <div class="rocket-body">
-                <div class="window"></div>
-            </div>
-            <div class="fin fin-left"></div>
-            <div class="fin fin-right"></div>
-            <div class="flame"></div>
-        </div> -->
-
         <!-- ----------------------------Courses and Software Section----------------------------------------------------- -->
-        <section id="courses">
-            <h3 class="section-heading">
-                <span><i class="fas fa-graduation-cap"></i></span>
-                <a href="#education-section" class="section-link">
-                    <span>Courses and Software</span> <i class="fas fa-link"></i>
-                </a>
+        <section id="courses" class="space-section">
+            <div class="stars-overlay"></div>
+            <h3 class="space-heading">
+                <span class="rocket-icon">🚀</span>
+                Courses & Certifications
+                <div class="radar-ping"></div>
             </h3>
+            
+            <div class="mission-control">
+                <div class="radar-screen">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-text">SCANNING KNOWLEDGE DATABASE...</div>
+                </div>
+            </div>
 
             <div id="courses-timeline">
                 <div class="timeline-line"></div>
@@ -108,12 +250,34 @@
                 <div class="timeline-item left">
                     <div class="timeline-card">
                         <div class="timeline-icon">
-                            <i class="fas fa-coffee"></i>
+                            <i class="fas fa-layer-group"></i>
                         </div>
                         <div class="timeline-content">
-                            <h4 class="timeline-title">Java with Object Oriented Programming</h4>
-                            <p class="timeline-description">Eclipse, Netbeans, and IntelliJ. Comprehensive understanding of OOP concepts, inheritance, polymorphism, and design patterns.</p>
-                            <div class="timeline-date">2023</div>
+                            <div class="course-badge">Advanced</div>
+                            <h4 class="timeline-title">Full Stack Web Development</h4>
+                            <div class="skill-progress-container">
+                                <div class="skill-meter">
+                                    <div class="skill-level" data-level="95">
+                                        <span class="skill-percentage">95%</span>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="achievement-unlock">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Master Developer</span>
+                                </div>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-item">React.js</span>
+                                <span class="tech-item">Node.js</span>
+                                <span class="tech-item">Express.js</span>
+                                <span class="tech-item">MongoDB</span>
+                                <span class="tech-item">PostgreSQL</span>
+                                <span class="tech-item">Bootstrap</span>
+                            </div>
+                            <div class="timeline-date">2023-2024</div>
                         </div>
                     </div>
                 </div>
@@ -121,11 +285,33 @@
                 <div class="timeline-item right">
                     <div class="timeline-card">
                         <div class="timeline-icon">
-                            <i class="fas fa-database"></i>
+                            <i class="fab fa-aws"></i>
                         </div>
                         <div class="timeline-content">
-                            <h4 class="timeline-title">Database Management</h4>
-                            <p class="timeline-description">MySQL, SQL Server, Oracle Database, PostgreSQL managed by DBMS. Advanced querying, optimization, and database design.</p>
+                            <div class="course-badge">Professional</div>
+                            <h4 class="timeline-title">Cloud Computing & DevOps</h4>
+                            <div class="skill-progress-container">
+                                <div class="skill-meter">
+                                    <div class="skill-level" data-level="88">
+                                        <span class="skill-percentage">88%</span>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="achievement-unlock">
+                                    <i class="fas fa-cloud"></i>
+                                    <span>Cloud Architect</span>
+                                </div>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-item">AWS</span>
+                                <span class="tech-item">Azure</span>
+                                <span class="tech-item">Docker</span>
+                                <span class="tech-item">Kubernetes</span>
+                                <span class="tech-item">Jenkins</span>
+                                <span class="tech-item">GitLab CI/CD</span>
+                            </div>
                             <div class="timeline-date">2023</div>
                         </div>
                     </div>
@@ -134,63 +320,103 @@
                 <div class="timeline-item left">
                     <div class="timeline-card">
                         <div class="timeline-icon">
-                            <i class="fas fa-network-wired"></i>
+                            <i class="fas fa-mobile-alt"></i>
                         </div>
                         <div class="timeline-content">
-                            <h4 class="timeline-title">Network Programming</h4>
-                            <p class="timeline-description">Wireshark and Packet Tracer. Network analysis, protocol understanding, and network security fundamentals.</p>
-                            <div class="timeline-date">2023</div>
+                            <div class="course-badge">Specialized</div>
+                            <h4 class="timeline-title">Mobile App Development</h4>
+                            <div class="skill-progress-container">
+                                <div class="skill-meter">
+                                    <div class="skill-level" data-level="82">
+                                        <span class="skill-percentage">82%</span>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="achievement-unlock">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Expert</span>
+                                </div>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-item">React Native</span>
+                                <span class="tech-item">Flutter</span>
+                                <span class="tech-item">Swift</span>
+                                <span class="tech-item">Kotlin</span>
+                                <span class="tech-item">Expo</span>
+                                <span class="tech-item">Firebase</span>
+                            </div>
+                            <div class="timeline-date">2024</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <div class="timeline-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="course-badge">Emerging</div>
+                            <h4 class="timeline-title">Data Science & Machine Learning</h4>
+                            <div class="skill-progress-container">
+                                <div class="skill-meter">
+                                    <div class="skill-level" data-level="75">
+                                        <span class="skill-percentage">75%</span>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="achievement-unlock">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI Innovator</span>
+                                </div>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-item">Python</span>
+                                <span class="tech-item">TensorFlow</span>
+                                <span class="tech-item">PyTorch</span>
+                                <span class="tech-item">Pandas</span>
+                                <span class="tech-item">Jupyter</span>
+                                <span class="tech-item">Scikit-learn</span>
+                            </div>
+                            <div class="timeline-date">2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
                     <div class="timeline-card">
                         <div class="timeline-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div class="timeline-content">
-                            <h4 class="timeline-title">Network Security & Nmap</h4>
-                            <p class="timeline-description">Completed "Scan Systems with Nmap" on Codecademy. Network scanning, vulnerability assessment, and ethical hacking practices.</p>
-                            <div class="timeline-date">2023</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-card">
-                        <div class="timeline-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Front-End Web Development</h4>
-                            <p class="timeline-description">React.js, Angular, and Bootstrap. Building responsive, interactive web applications with modern frameworks.</p>
-                            <div class="timeline-date">2023</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-card">
-                        <div class="timeline-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Back-End Development</h4>
-                            <p class="timeline-description">Node.js and Express.js. Building scalable server-side applications and integrating database solutions.</p>
-                            <div class="timeline-date">2023</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-card">
-                        <div class="timeline-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Cloud & DevOps Tools</h4>
-                            <p class="timeline-description">AWS, Azure, Jenkins, and Docker. Creating cloud-native applications and managing infrastructure.</p>
+                            <div class="course-badge">Security</div>
+                            <h4 class="timeline-title">Cybersecurity & Ethical Hacking</h4>
+                            <div class="skill-progress-container">
+                                <div class="skill-meter">
+                                    <div class="skill-level" data-level="79">
+                                        <span class="skill-percentage">79%</span>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="achievement-unlock">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Security Guardian</span>
+                                </div>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-item">Nmap</span>
+                                <span class="tech-item">Wireshark</span>
+                                <span class="tech-item">Metasploit</span>
+                                <span class="tech-item">Burp Suite</span>
+                                <span class="tech-item">Kali Linux</span>
+                                <span class="tech-item">OWASP</span>
+                            </div>
                             <div class="timeline-date">2023</div>
                         </div>
                     </div>
@@ -199,12 +425,34 @@
                 <div class="timeline-item right">
                     <div class="timeline-card">
                         <div class="timeline-icon">
-                            <i class="fas fa-cogs"></i>
+                            <i class="fas fa-gamepad"></i>
                         </div>
                         <div class="timeline-content">
-                            <h4 class="timeline-title">DevOps Tools</h4>
-                            <p class="timeline-description">Jenkins, Docker, Kubernetes, GitLab CI/CD. Implementing CI/CD pipelines and containerized applications.</p>
-                            <div class="timeline-date">2023</div>
+                            <div class="course-badge">Creative</div>
+                            <h4 class="timeline-title">Game Development & 3D Graphics</h4>
+                            <div class="skill-progress-container">
+                                <div class="skill-meter">
+                                    <div class="skill-level" data-level="85">
+                                        <span class="skill-percentage">85%</span>
+                                        <div class="skill-bar">
+                                            <div class="skill-fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="achievement-unlock">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>Game Master</span>
+                                </div>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-item">Unity</span>
+                                <span class="tech-item">Unreal Engine</span>
+                                <span class="tech-item">Blender</span>
+                                <span class="tech-item">C#</span>
+                                <span class="tech-item">Three.js</span>
+                                <span class="tech-item">WebGL</span>
+                            </div>
+                            <div class="timeline-date">2024</div>
                         </div>
                     </div>
                 </div>
@@ -713,77 +961,394 @@
     </main>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="particles-header.js"></script>
+    <script src="particles-background.js"></script>
+    <script src="animated-bio.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuIcon = document.querySelector('.menu-icon');
-            const navLinks = document.querySelector('.nav-links');
-            const navbar = document.querySelector('.navbar');
-
-            // Toggle mobile menu
-            menuIcon.addEventListener('click', function () {
-                navLinks.classList.toggle('active');
-                menuIcon.classList.toggle('active');
-            });
-
-            // Add scrolled class to navbar
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
+        // Create additional particle containers for full page coverage
+        function createFullPageParticles() {
+            // Get the full document height
+            const documentHeight = Math.max(
+                document.body.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.clientHeight,
+                document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight
+            );
+            
+            // Calculate how many viewport heights we need to cover
+            const viewportHeight = window.innerHeight;
+            const sectionsNeeded = Math.ceil(documentHeight / viewportHeight);
+            
+            // Create additional particle containers for each section
+            for (let i = 1; i < sectionsNeeded; i++) {
+                const particleContainer = document.createElement('div');
+                particleContainer.id = `particles-js-section-${i}`;
+                particleContainer.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 1;
+                    pointer-events: none;
+                    transform: translateY(${i * 100}vh);
+                `;
+                document.body.appendChild(particleContainer);
+                
+                // Initialize enhanced particles for this container
+                particlesJS(`particles-js-section-${i}`, {
+                    "particles": {
+                        "number": {
+                            "value": 100,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": ["#ffffff", "#64ffda", "#ff6b6b", "#4ecdc4", "#ffd93d"]
+                        },
+                        "shape": {
+                            "type": ["circle", "star"]
+                        },
+                        "opacity": {
+                            "value": 0.8,
+                            "random": true,
+                            "anim": {
+                                "enable": true,
+                                "speed": 2,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 4,
+                            "random": true,
+                            "anim": {
+                                "enable": true,
+                                "speed": 6,
+                                "size_min": 0.5,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": false
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 3,
+                            "direction": "none",
+                            "random": true,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": true,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": ["grab", "bubble"]
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 200,
+                                "size": 8,
+                                "duration": 2,
+                                "opacity": 0.8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 6
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        }
+        
+        // Initialize full page particles when page loads
+        window.addEventListener('load', function() {
+            setTimeout(createFullPageParticles, 1000);
+            
+            // Hide loading screen after everything loads - FASTER!
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loading-screen');
+                loadingScreen.style.opacity = '0';
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 300);
+            }, 800);
+        });
+        
+        // Recreate particles when window is resized
+        window.addEventListener('resize', function() {
+            // Remove existing additional containers
+            const existingContainers = document.querySelectorAll('[id^="particles-js-section-"]');
+            existingContainers.forEach(container => container.remove());
+            
+            // Recreate with new dimensions
+            setTimeout(createFullPageParticles, 500);
+        });
+        </script>
+        
+        <!-- Enhanced Navigation & UX JavaScript -->
+        <script>
+            // Scroll Progress Indicator
+            window.addEventListener('scroll', function() {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = (scrollTop / scrollHeight) * 100;
+                document.getElementById('scroll-indicator').style.width = scrollPercent + '%';
+                
+                // Show/hide scroll to top button
+                const scrollToTopBtn = document.getElementById('scroll-to-top');
+                if (scrollTop > 300) {
+                    scrollToTopBtn.classList.add('visible');
                 } else {
-                    navbar.classList.remove('scrolled');
+                    scrollToTopBtn.classList.remove('visible');
                 }
             });
             
-            // ROCKET MOUSE-FOLLOW SCRIPT
-            const rocket = document.getElementById('rocket');
-            if (rocket) {
-            let mouseX = window.innerWidth / 2;
-            let mouseY = window.innerHeight / 2;
-                
-                // Use objects to store rocket's position and velocity for smoother animation
-                let position = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-                let velocity = { x: 0, y: 0 };
-                let angle = 0;
-                
-                const easing = 0.08; // How quickly the rocket follows the mouse (lower is smoother)
-                
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-
-            function animateRocket() {
-                    // Calculate distance to target
-                    let dx = mouseX - position.x;
-                    let dy = mouseY - position.y;
-                    
-                    // Accelerate towards the target
-                    velocity.x = dx * easing;
-                    velocity.y = dy * easing;
-                    
-                    // Update position
-                    position.x += velocity.x;
-                    position.y += velocity.y;
-                    
-                // Calculate angle for rotation
-                    let targetAngle = Math.atan2(dy, dx) * 180 / Math.PI + 90;
-                    
-                    // Smoothly rotate towards the target angle
-                    angle += (targetAngle - angle) * 0.1;
-                    
-                    // Apply transformations
-                    rocket.style.left = position.x + 'px';
-                    rocket.style.top = position.y + 'px';
-                    rocket.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-                    
-                    // Continue the animation loop
-                requestAnimationFrame(animateRocket);
-                }
-                
-                // Start the animation
-                animateRocket();
+            // Smooth scroll to top
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             }
-        });
+            
+
+            
+
+            
+            // Enhanced navigation with active states
+            function updateActiveNavigation() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNavigation);
+            
+            // Add typing effect to header subtitle
+            function typeWriter(element, text, speed = 100) {
+                let i = 0;
+                element.innerHTML = '';
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                }
+                type();
+            }
+            
+            // Initialize typing effect after loading
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const subtitle = document.querySelector('.header-content p');
+                    if (subtitle) {
+                        typeWriter(subtitle, 'Web Developer & Web Designer', 80);
+                    }
+                }, 2500);
+            });
+            
+            // Add intersection observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections for scroll animations
+            window.addEventListener('load', function() {
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(30px)';
+                    section.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    observer.observe(section);
+                });
+                
+                // Initialize enhanced scroll animations
+                initEnhancedScrollAnimations();
+            });
+            
+            // 🌟 ENHANCED SCROLL ANIMATIONS 🌟
+            function initEnhancedScrollAnimations() {
+                // Smooth scroll reveal for timeline items
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                const techCards = document.querySelectorAll('.tech-card, .project-card, .space-capsule');
+                
+                // Enhanced intersection observer for timeline
+                const timelineObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0) scale(1)';
+                    
+                            // Add staggered animation for child elements
+                            const children = entry.target.querySelectorAll('.timeline-card, .tech-item, .skill-bar');
+                            children.forEach((child, index) => {
+                                setTimeout(() => {
+                                    child.style.opacity = '1';
+                                    child.style.transform = 'translateY(0)';
+                                }, index * 100);
+                            });
+                        }
+                    });
+                }, {
+                    threshold: 0.2,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                
+                // Observe timeline items
+                timelineItems.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(50px) scale(0.95)';
+                    item.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    timelineObserver.observe(item);
+                });
+                
+                // Enhanced card animations
+                techCards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    card.style.transition = `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s`;
+                    observer.observe(card);
+                });
+                    
+                // Smooth parallax effect for background elements
+                window.addEventListener('scroll', function() {
+                    const scrolled = window.pageYOffset;
+                    const parallaxElements = document.querySelectorAll('.stars-overlay, .twinkling');
+                    
+                    parallaxElements.forEach(element => {
+                        const speed = 0.5;
+                        element.style.transform = `translateY(${scrolled * speed}px)`;
+                    });
+                });
+            }
+            
+            // 🌟 ENHANCED HEADER ANIMATIONS 🌟
+            function enhanceHeaderAnimations() {
+                // Add floating animation to header elements
+                const headerElements = document.querySelectorAll('.hero-section h1, .hero-section p, .hero-section .btn');
+                
+                headerElements.forEach((element, index) => {
+                    element.style.animation = `headerElementFloat ${3 + index * 0.5}s ease-in-out infinite`;
+                    element.style.animationDelay = `${index * 0.2}s`;
+                });
+                
+                // Add CSS for enhanced animations
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes headerElementFloat {
+                        0%, 100% { transform: translateY(0px); }
+                        50% { transform: translateY(-8px); }
+                    }
+                    
+                    @keyframes smoothFadeIn {
+                        0% { 
+                            opacity: 0; 
+                            transform: translateY(30px) scale(0.95); 
+                        }
+                        100% { 
+                            opacity: 1; 
+                            transform: translateY(0) scale(1); 
+                        }
+                    }
+                    
+                    @keyframes smoothSlideIn {
+                        0% { 
+                            opacity: 0; 
+                            transform: translateX(-50px); 
+                        }
+                        100% { 
+                            opacity: 1; 
+                            transform: translateX(0); 
+                        }
+                    }
+                    
+                    /* Enhanced card hover effects */
+                    .timeline-card, .tech-card, .project-card, .space-capsule {
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+                    }
+                    
+                    .timeline-card:hover, .tech-card:hover, .project-card:hover, .space-capsule:hover {
+                        transform: translateY(-12px) scale(1.02) !important;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            // Initialize everything when page loads
+            document.addEventListener('DOMContentLoaded', function() {
+                enhanceHeaderAnimations();
+                
+                console.log('🚀 Enhanced Smooth Animation System Loaded! 🚀');
+            });
         </script>
+    
+    <!-- Theme Toggle Button -->
+
+    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+        <i class="fas fa-rocket"></i>
+    </button>
+    
+    <script src="contact-form.js"></script>
+    
+    <!-- Load Particle Systems -->
+    <script src="particles-background.js"></script>
+    <script src="particles-header.js"></script>
 </body>
 </html>
