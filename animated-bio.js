@@ -19,54 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16);
     }
     
-    // Intersection Observer for triggering animations when in view
-    const observerOptions = {
-        threshold: 0.3,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const statNumbers = entry.target.querySelectorAll('.stat-number');
-                
-                statNumbers.forEach((number, index) => {
-                    const target = parseInt(number.getAttribute('data-target'));
-                    
-                    // Stagger the animations
-                    setTimeout(() => {
-                        animateCounter(number, target);
-                    }, index * 200);
-                });
-                
-                // Unobserve after animation starts
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Start observing the stats dashboard
+    // DISABLED - No counter animations for smooth experience
+    // Set numbers immediately without animation
     const statsDashboard = document.querySelector('.stats-dashboard');
     if (statsDashboard) {
-        observer.observe(statsDashboard);
+        const statNumbers = statsDashboard.querySelectorAll('.stat-number');
+        statNumbers.forEach((number) => {
+            const target = parseInt(number.getAttribute('data-target'));
+            number.textContent = target.toLocaleString();
+        });
     }
     
-    // Add typewriter effect for code lines (backup if CSS animation doesn't work)
-    const codeLines = document.querySelectorAll('.code-line');
-    codeLines.forEach((line, index) => {
-        line.style.animationDelay = `${0.5 + index * 0.5}s`;
-    });
-    
-    // Add floating animation refresh on hover for tech icons
-    const techIcons = document.querySelectorAll('.tech-icon');
-    techIcons.forEach(icon => {
-        icon.addEventListener('mouseenter', function() {
-            this.style.animationPlayState = 'paused';
-            setTimeout(() => {
-                this.style.animationPlayState = 'running';
-            }, 100);
-        });
-    });
+    // DISABLED - No typewriter or tech icon animations for smooth experience
     
     console.log('🚀 Animated Bio loaded successfully!');
 }); 

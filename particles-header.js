@@ -6,10 +6,10 @@
 particlesJS('particles-js-header', {
   "particles": {
     "number": {
-      "value": 60,  // Nice clean amount
+      "value": 40,  // REDUCED for better performance - was 60
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 1000  // Increased area for better performance
       }
     },
     "color": {
@@ -289,4 +289,4 @@ setInterval(() => {
   }
 }, 6000);
 
-console.log('✨ Clean White Header Stars Loaded! ✨'); 
+console.log('⚡ PERFORMANCE OPTIMIZED Header Stars Loaded! ⚡'); 

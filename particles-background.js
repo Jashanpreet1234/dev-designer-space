@@ -6,10 +6,10 @@
 particlesJS('particles-js-background', {
   "particles": {
     "number": {
-      "value": 150,  // Nice amount - not too much
+      "value": 80,  // REDUCED for better performance - was 150
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 1200  // Increased area for better distribution
       }
     },
     "color": {
@@ -57,15 +57,15 @@ particlesJS('particles-js-background', {
     },
     "move": {
       "enable": true,
-      "speed": 3.5,  // MUCH FASTER movement - increased from 1.2
+      "speed": 2.5,  // OPTIMIZED movement - balanced performance vs visuals
       "direction": "none",
       "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": true,
-        "rotateX": 600,  // Increased attraction
+        "enable": false,  // DISABLED for better performance
+        "rotateX": 600,
         "rotateY": 800
       }
     }
@@ -163,12 +163,12 @@ function createShootingStar() {
   };
 }
 
-// More frequent shooting stars
+// OPTIMIZED shooting stars frequency for performance
 setInterval(() => {
-  if (Math.random() < 0.4) {  // Increased frequency
+  if (Math.random() < 0.2) {  // REDUCED frequency for better performance - was 0.4
     createShootingStar();
   }
-}, 2500);  // More frequent - reduced from 4000
+}, 5000);  // LESS frequent for better performance - was 2500
 
 // ⭐ FASTER WHITE SPARKLES ⭐
 function createWhiteSparkle() {
@@ -216,12 +216,12 @@ function createWhiteSparkle() {
   };
 }
 
-// More frequent sparkles
+// OPTIMIZED sparkles frequency for performance
 setInterval(() => {
-  if (Math.random() < 0.5) {  // Increased frequency
+  if (Math.random() < 0.25) {  // REDUCED frequency for better performance - was 0.5
     createWhiteSparkle();
   }
-}, 3000);  // More frequent - reduced from 5000
+}, 6000);  // LESS frequent for better performance - was 3000
 
 // ✨ FASTER WHITE WISPS ✨
 function createWhiteWisp() {
@@ -278,11 +278,11 @@ function createWhiteWisp() {
   };
 }
 
-// More frequent white wisps
+// OPTIMIZED white wisps frequency for performance
 setInterval(() => {
-  if (Math.random() < 0.4) {  // Increased frequency
+  if (Math.random() < 0.2) {  // REDUCED frequency for better performance - was 0.4
     createWhiteWisp();
   }
-}, 4000);  // More frequent - reduced from 6000
+}, 8000);  // LESS frequent for better performance - was 4000
 
-console.log('✨ Faster White Star System Loaded! ✨'); 
+console.log('⚡ PERFORMANCE OPTIMIZED White Star System Loaded! ⚡'); 

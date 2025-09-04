@@ -4,9 +4,32 @@ const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
 const morgan = require('morgan');
+const rateLimit = require('express-rate-limit');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Rate limiting middleware
+const limiter = rateLimit({
+  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 15 * 60 * 1000, // 15 minutes
+  max: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS) || 100, // Limit each IP to 100 requests per windowMs
+  message: {
+    error: 'Too many requests from this IP, please try again later.',
+    retryAfter: '15 minutes'
+  },
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+
+// Contact form specific rate limiting
+const contactLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 5, // Limit contact form submissions to 5 per hour per IP
+  message: {
+    error: 'Too many contact form submissions, please try again in an hour.',
+  },
+});
 
 // Security middleware
 app.use(helmet({
@@ -23,8 +46,17 @@ app.use(helmet({
   }
 }));
 
-// Enable CORS
-app.use(cors());
+// Apply rate limiting to all requests
+app.use(limiter);
+
+// Enable CORS with enhanced security
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://jashanpreet1234.github.io', 'https://your-domain.com']
+    : ['http://localhost:3000', 'http://localhost:8080'],
+  credentials: true,
+  optionsSuccessStatus: 200
+}));
 
 // Compression middleware
 app.use(compression());
@@ -56,8 +88,8 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Contact form endpoint
-app.post('/api/contact', (req, res) => {
+// Contact form endpoint with additional rate limiting
+app.post('/api/contact', contactLimiter, (req, res) => {
   const { name, email, message } = req.body;
   
   // Basic validation

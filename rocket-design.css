@@ -22,7 +22,10 @@
     height: 120px;
     z-index: 1001;
     pointer-events: none;
-    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.5));
+    /* Remove heavy drop-shadow to improve performance */
+    filter: none;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .rocket-body {
@@ -89,7 +92,8 @@
     background: transparent;
     transform-origin: bottom;
     transform: translateX(-50%);
-    animation: flame-wave 0.3s infinite linear;
+    /* Slightly slower to reduce CPU */
+    animation: flame-wave 0.5s infinite linear;
 }
 
 /* Multi-layered flame */

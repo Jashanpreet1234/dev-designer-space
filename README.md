@@ -1,7 +1,7 @@
 # 🚀 **Commander Jashan's Space Portfolio** 🌌
 
 <div align="center">
-  
+
 ![Portfolio Banner](https://img.shields.io/badge/Portfolio-Space%20Themed-00ff7f?style=for-the-badge&logo=rocket&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Online-success?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge)
@@ -9,7 +9,7 @@
 
 **🌟 A futuristic, space-themed portfolio showcasing web development skills with stunning animations and interactive elements 🌟**
 
-[🌐 **Live Demo**](https://jashanpreet1234.github.io/dev-designer-space/) • [📧 **Contact**](mailto:jashanpreetkaur2904@gmail.com) • [💼 **LinkedIn**](https://www.linkedin.com/in/jashanpreet-jashan-kaur-9aaa40232/)
+[🌐 **Live Demo**](https://jashanpreet1234.github.io/dev-designer-space/) • [📧 **Contact**](mailto:jashanpreetkaur2904@gmail.com) • [💼 **LinkedIn**](https://www.linkedin.com/in/yourprofile)
 
 </div>
 
@@ -80,16 +80,16 @@ Welcome to Commander Jashan's digital space station! This portfolio is a fully i
 
 ### **⚡ Installation & Launch**
 
-```bash
+   ```bash
 # 🛸 Clone the space station
 git clone https://github.com/Jashanpreet1234/portfolio.io-main.git
 cd portfolio.io-main
 
 # 🔋 Power up the systems
-npm install
+   npm install
 
 # 🚀 Launch the development server
-npm run dev
+   npm run dev
 
 # 🌌 Access Mission Control at
 # http://localhost:3000
@@ -326,7 +326,7 @@ MIT License - Feel free to explore, modify, and use this code for your own space
 **Commander Jashan** 👩‍🚀
 
 [![Email](https://img.shields.io/badge/Email-jashanpreetkaur2904%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jashanpreetkaur2904@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jashanpreet-jashan-kaur-9aaa40232/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yourprofile)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jashanpreet1234)
 
 **"The fact that programming is enjoyable makes me keen to learn new programming languages. Additionally, if I love something, I can easily add beauty to it."** ⭐

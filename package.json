@@ -1,28 +1,101 @@
 {
-  "name": "portfolio-server",
-  "version": "1.0.0",
-  "description": "Portfolio website with Node.js server",
+  "name": "jashan-space-portfolio",
+  "version": "3.0.0",
+  "description": "🚀 Commander Jashan's Enhanced Space Portfolio - Powered by Shopify Web Tools",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "echo 'No build required for static files'",
-    "test": "echo 'No tests specified'"
+    "dev": "concurrently \"nodemon server.js\" \"npm run watch:css\" \"npm run dev:react\"",
+    "dev:react": "vite",
+    "build": "npm run build:css && npm run build:react && npm run optimize:images && npm run minify:js",
+    "build:react": "vite build",
+    "build:css": "postcss style.css -o dist/style.min.css --use autoprefixer cssnano",
+    "build:js": "terser particles-background.js particles-header.js animated-bio.js contact-form.js -o dist/scripts.min.js --compress --mangle",
+    "watch:css": "postcss style.css -o dist/style.css --use autoprefixer --watch",
+    "optimize:images": "imagemin images/* --out-dir=dist/images --plugin=imagemin-webp --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant",
+    "minify:js": "npm run build:js",
+    "lint": "eslint *.js --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "audit": "npm audit --audit-level moderate",
+    "lighthouse": "lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse.json",
+    "deploy:heroku": "git push heroku main",
+    "deploy:netlify": "netlify deploy --prod --dir=dist",
+    "deploy:shopify": "shopify app generate schema && shopify app deploy",
+    "test": "jest",
+    "precommit": "npm run lint && npm run format",
+    "analyze": "webpack-bundle-analyzer dist/stats.json",
+    "serve": "live-server --port=8080 --open=/index.html",
+    "shopify:init": "shopify app init",
+    "storefront:dev": "npm run dev -- --mode storefront"
   },
-  "keywords": ["portfolio", "express", "node"],
-  "author": "Jashanpreet Kaur",
+  "keywords": [
+    "portfolio", 
+    "space-theme", 
+    "interactive", 
+    "web-development", 
+    "shopify-polaris",
+    "hydrogen",
+    "react",
+    "animations", 
+    "express", 
+    "node", 
+    "responsive", 
+    "modern"
+  ],
+  "author": {
+    "name": "Jashanpreet Kaur",
+    "email": "jashanpreetkaur2904@gmail.com",
+    "url": "https://jashanpreet1234.github.io/dev-designer-space/"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jashanpreet1234/portfolio.io-main.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jashanpreet1234/portfolio.io-main/issues"
+  },
+  "homepage": "https://jashanpreet1234.github.io/dev-designer-space/",
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "helmet": "^7.1.0",
     "compression": "^1.7.4",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "express-rate-limit": "^7.1.5",
+    "dotenv": "^16.3.1",
+    "@shopify/polaris": "^12.11.0",
+    "@shopify/app-bridge": "^4.1.2",
+    "@shopify/app-bridge-react": "^4.1.2",
+    "@shopify/hydrogen": "^2023.10.0",
+    "@shopify/storefront-api-client": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.4",
+    "three": "^0.158.0",
+    "@react-three/fiber": "^8.15.11",
+    "@react-three/drei": "^9.88.13",
+    "gsap": "^3.12.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "terser": "^5.24.0",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.1.1",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "typescript": "^5.2.2",
+    "@shopify/cli": "^3.51.0"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   }
 } 
