@@ -1,0 +1,412 @@
+/* Enhanced Space Portfolio Global Styles */
+/* Integrating Space Theme with Shopify Polaris Design System */
+
+:root {
+  /* Space Theme Colors */
+  --space-primary: #ff6b35;
+  --space-secondary: #00d4ff;
+  --space-accent: #f7931e;
+  --space-dark: #0a0a0a;
+  --space-darker: #000000;
+  
+  /* Polaris Integration */
+  --p-color-bg-primary: var(--space-primary);
+  --p-color-bg-primary-hovered: #e85a2e;
+  --p-color-bg-primary-pressed: #d04d26;
+  
+  --p-color-border-interactive: var(--space-secondary);
+  --p-color-border-interactive-hovered: #00c4ee;
+  
+  /* Space Gradients */
+  --space-gradient-primary: linear-gradient(135deg, var(--space-primary), var(--space-accent));
+  --space-gradient-secondary: linear-gradient(135deg, var(--space-secondary), #00b4d8);
+  --space-gradient-dark: linear-gradient(135deg, #000000, #0f0f23, #1a1a2e, #16213e);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--space-gradient-dark);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* React Root Container */
+#react-root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Polaris Frame Overrides for Space Theme */
+.Polaris-Frame {
+  background: transparent !important;
+}
+
+.Polaris-Frame__TopBar {
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.3) !important;
+}
+
+.Polaris-Frame__Navigation {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(0, 212, 255, 0.2) !important;
+}
+
+/* Enhanced Card Styles */
+.Polaris-Card {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(0, 212, 255, 0.2) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.Polaris-Card:hover {
+  border-color: rgba(0, 212, 255, 0.4) !important;
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+/* Button Enhancements */
+.Polaris-Button--primary {
+  background: var(--space-gradient-primary) !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3) !important;
+}
+
+.Polaris-Button--primary:hover {
+  background: linear-gradient(135deg, #e85a2e, #e67e10) !important;
+  box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.Polaris-Button--outline {
+  border-color: var(--space-secondary) !important;
+  color: var(--space-secondary) !important;
+}
+
+.Polaris-Button--outline:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+  border-color: #00c4ee !important;
+}
+
+/* Badge Enhancements */
+.Polaris-Badge {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.Polaris-Badge--statusSuccess {
+  background: rgba(38, 166, 154, 0.8) !important;
+  border-color: rgba(38, 166, 154, 0.4) !important;
+}
+
+.Polaris-Badge--statusInfo {
+  background: rgba(0, 212, 255, 0.8) !important;
+  border-color: rgba(0, 212, 255, 0.4) !important;
+}
+
+.Polaris-Badge--statusWarning {
+  background: rgba(255, 167, 38, 0.8) !important;
+  border-color: rgba(255, 167, 38, 0.4) !important;
+}
+
+.Polaris-Badge--statusCritical {
+  background: rgba(255, 71, 87, 0.8) !important;
+  border-color: rgba(255, 71, 87, 0.4) !important;
+}
+
+/* Progress Bar Enhancements */
+.Polaris-ProgressBar {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.Polaris-ProgressBar__Progress {
+  background: var(--space-gradient-secondary) !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  position: relative;
+}
+
+.Polaris-ProgressBar__Progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Navigation Enhancements */
+.Polaris-Navigation__Item {
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+}
+
+.Polaris-Navigation__Item--selected {
+  background: rgba(0, 212, 255, 0.2) !important;
+  border: 1px solid rgba(0, 212, 255, 0.4) !important;
+}
+
+.Polaris-Navigation__Item:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+}
+
+/* Text Overrides */
+.Polaris-Text--root {
+  color: inherit !important;
+}
+
+.Polaris-Text--colorTextInverse {
+  color: #ffffff !important;
+}
+
+.Polaris-Text--colorSubdued {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Tab Enhancements */
+.Polaris-Tabs__TabContainer {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 12px !important;
+  padding: 4px !important;
+}
+
+.Polaris-Tabs__Tab {
+  background: transparent !important;
+  border-radius: 8px !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: all 0.3s ease !important;
+}
+
+.Polaris-Tabs__Tab--selected {
+  background: var(--space-gradient-primary) !important;
+  color: #ffffff !important;
+}
+
+.Polaris-Tabs__Tab:hover {
+  background: rgba(0, 212, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+/* Modal Enhancements */
+.Polaris-Modal-Dialog {
+  background: rgba(0, 0, 0, 0.95) !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.Polaris-Modal-Header {
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2) !important;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(0, 212, 255, 0.6); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slideInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Utility Classes */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glow-effect {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.pulse-effect {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Space-themed Gradients */
+.gradient-primary {
+  background: var(--space-gradient-primary);
+}
+
+.gradient-secondary {
+  background: var(--space-gradient-secondary);
+}
+
+.gradient-dark {
+  background: var(--space-gradient-dark);
+}
+
+/* Glass Morphism Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.glass-button {
+  background: rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Polaris-Frame__Navigation {
+    display: none;
+  }
+  
+  .Polaris-Card {
+    margin: 8px !important;
+  }
+  
+  .glass-card {
+    margin: 4px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .Polaris-Button {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--space-gradient-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00c4ee, #00a4c8);
+}
+
+/* Focus States */
+.Polaris-Button:focus,
+.Polaris-TextField__Input:focus,
+.Polaris-Select__Input:focus {
+  outline: 2px solid var(--space-secondary) !important;
+  outline-offset: 2px !important;
+}
+
+/* Loading States */
+.loading-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Enhanced Typography */
+.space-heading {
+  background: var(--space-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+.space-text-glow {
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* Interactive Elements */
+.interactive-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.interactive-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+}
+
+.interactive-card:active {
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Status Indicators */
+.status-online {
+  position: relative;
+}
+
+.status-online::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #26a69a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(38, 166, 154, 0.5);
+  animation: pulse 2s infinite;
+} 
